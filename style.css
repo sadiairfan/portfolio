@@ -1,0 +1,381 @@
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Header & Navbar Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 10%;
+    background: rgba(8, 27, 41, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar a {
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+/* Home Section Styling */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10% 0;
+    background: var(--bg-color);
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.home-content h3 span {
+    color: var(--main-color);
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    line-height: 1.6;
+    color: #b0c4de;
+}
+
+/* Social Media Icons */
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    margin: 0 15px 30px 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--main-color);
+    border-radius: 40px;
+    font-size: 16px;
+    color: var(--bg-color);
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .5s ease;
+    border: 2px solid var(--main-color);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-outline:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+/* About Section Styling */
+.about {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    padding: 0 10%;
+}
+
+.heading {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.about-content h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #b0c4de;
+    margin: 20px 0;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.about-content p strong {
+    color: var(--main-color);
+}
+
+/* Skills Section Styling */
+.skills {
+    min-height: 100vh;
+    background: var(--bg-color);
+    padding: 100px 10% 120px;
+}
+
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.skills-column {
+    flex: 1 1 400px;
+}
+
+.skills-column .title {
+    font-size: 24px;
+    margin: 0 0 25px;
+    color: var(--main-color);
+}
+
+.skills-box {
+    border: 2px solid var(--second-bg-color);
+    background-color: var(--second-bg-color);
+    border-radius: 15px;
+    padding: 25px;
+    transition: .5s ease;
+}
+
+.skills-box:hover {
+    box-shadow: 0 0 20px var(--main-color);
+    border-color: var(--main-color);
+}
+
+.skills-content .progress {
+    padding: 15px 0;
+}
+
+.skills-content .progress h3 {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.skills-content .progress h3 span {
+    color: var(--main-color);
+    font-size: 14px;
+}
+
+/* Projects Section Styling */
+.projects {
+    min-height: 100vh;
+    background: var(--second-bg-color);
+    padding: 100px 10% 120px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.project-box {
+    flex: 1 1 280px;
+    max-width: 320px;
+    background: var(--bg-color);
+    padding: 40px 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid transparent;
+    /* Smooth cubic-bezier transition for upscale focusing effect */
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s, border-color 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+/* 1. Jab container par mouse aaye, to default saare boxes thode chote aur halkay blur ho jayein */
+.projects-container:hover .project-box {
+    transform: scale(0.9);
+    filter: blur(2px);
+    opacity: 0.6;
+}
+
+/* 2. Lekin jis specific box par tumhara cursor (hover) hai, woh bada ho kar center focus mein aaye */
+.projects-container .project-box:hover {
+    transform: scale(1.12);
+    filter: blur(0);
+    opacity: 1;
+    border-color: var(--main-color);
+    box-shadow: 0 15px 35px rgba(0, 171, 240, 0.4);
+    z-index: 5;
+}
+
+.project-box .icon {
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.project-box h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project-box p {
+    font-size: 14px;
+    color: #b0c4de;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.btn-sm {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.btn-sm:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* Contact Section Styling */
+.contact {
+    min-height: 100vh;
+    background: var(--bg-color);
+    padding: 100px 10% 120px;
+}
+
+.contact form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 8px;
+    margin: 10px 0;
+    border: 2px solid transparent;
+    transition: .3s;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 10px rgba(0, 171, 240, 0.3);
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 20px;
+    cursor: pointer;
+}
