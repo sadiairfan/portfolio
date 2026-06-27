@@ -379,3 +379,120 @@ body {
     margin-top: 20px;
     cursor: pointer;
 }
+
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+
+/* 1. For Tablets & Small Laptops (Max Width: 991px) */
+@media (max-width: 991px) {
+    .header {
+        padding: 20px 5%;
+    }
+    
+    .home, .about, .skills, .projects, .contact {
+        padding: 80px 5% 80px;
+    }
+    
+    .home-content h1 {
+        font-size: 46px;
+    }
+}
+
+/* 2. For Mobile Devices (Max Width: 768px) */
+@media (max-width: 768px) {
+    /* Navbar stack configuration */
+    .header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+        position: relative; /* Fixed top par mobile scroll aasan karne ke liye */
+    }
+
+    .navbar a {
+        margin: 0 12px;
+        font-size: 16px;
+    }
+
+    /* Sections stacking layout */
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .social-media a {
+        margin: 0 8px 20px;
+    }
+
+    .btn-group {
+        justify-content: center;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .about-content p {
+        text-align: center;
+    }
+
+    /* Skills column adjustment */
+    .skills-column {
+        flex: 1 1 100%;
+    }
+
+    /* Projects focus list constraint logic override for touch devices */
+    .projects-container:hover .project-box {
+        transform: none;
+        filter: none;
+        opacity: 1;
+    }
+    
+    .projects-container .project-box {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .projects-container .project-box:hover {
+        transform: scale(1.02);
+    }
+
+    /* Contact form input fields stack */
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+/* 3. For Tiny Smartphones (Max Width: 450px) */
+@media (max-width: 450px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+}
